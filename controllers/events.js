@@ -1,15 +1,21 @@
 
-var getAllEvents = () => {
-
+var getAllEvents = (req, res) => {
+	res.status(200).json({
+		data: []
+	});
 };
 
-var addEvent = () => {
-
+var addEvent = (req, res) => {
+	return res.status(201).json({
+		message: 'added event',
+	})
 };
 
 
-var getByActor = () => {
-
+var getByActor = (req, res) => {
+	return res.status(200).json({
+		data: []
+	});
 };
 
 

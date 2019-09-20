@@ -1,14 +1,20 @@
 
-var getAllActors = () => {
-	
+var getAllActors = (req, res) => {
+	return res.status(200).json({
+		data: []
+	})
 };
 
-var updateActor = () => {
-
+var updateActor = (req, res) => {
+	return res.status(200).json({
+		message: 'updated'
+	});
 };
 
-var getStreak = () => {
-
+var getStreak = (req, res) => {
+	return res.status(200).json({
+		data: []
+	});
 };
 
 

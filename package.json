@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "prestart": "npm install",
+    "prestart": "npm install && npm run createTables",
     "start": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
-    "pretest": "npm install",
-    "test": "./node_modules/.bin/mocha test"
+    "pretest": "npm install && npm run dropTables && npm run createTables",
+    "test": "./node_modules/.bin/mocha test",
+    "createTables": "node ./models/createTables.js",
+    "dropTables": "node ./models/dropTables.js"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
